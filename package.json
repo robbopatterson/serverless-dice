@@ -1,0 +1,19 @@
+{
+  "name": "serverless-dice",
+  "version": "1.0.0",
+  "description": "A demo of using the serverless framework",
+  "main": "handler.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robbopatterson/serverless-dice.git"
+  },
+  "keywords": [],
+  "author": "Robert Patterson",
+  "dependencies": {
+    "express": "^4.18.1",
+    "serverless-http": "^2.7.0"
+  }
+}
