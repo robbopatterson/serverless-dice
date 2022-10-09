@@ -6,6 +6,7 @@ const getRandomInt = (max) => Math.floor(Math.random() * max);
 const getDieRoll = () => getRandomInt(6)+1;
 
 const app = express();
+app.use(express.json());
 
 app.get('/roll', async (req, res) => {
   try{
