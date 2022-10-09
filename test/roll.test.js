@@ -4,7 +4,7 @@ const supertest = require('supertest');
 
 const request = supertest(app);
 
-describe('Roll', () => {
+describe('GET /roll', () => {
     it('should return a dice throw', async () => {
         const res = await request.get('/roll');
         expect(res.status).to.equal(200);
@@ -23,9 +23,10 @@ describe('Roll', () => {
     })    
 });
 
-describe('Unknown endpoint get', () => {
+describe('GET /unknown', () => {
     it('should return an error', async () => {
         const res = await request.get('/unknown');
         expect(res.status).to.equal(404);
+        expect(res.body.error).to.equal('No matching API found: /unknown');        
     })
 });

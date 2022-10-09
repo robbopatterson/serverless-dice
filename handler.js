@@ -17,8 +17,8 @@ app.get('/roll', async (req, res) => {
 });
 
 app.use((req, res, next) => {
-  console.error('no match found for request', req);
-  return res.status(404).json({ error: `No matching API found` });
+  //console.error('no match found for request', req);
+  return res.status(404).json({ error: `No matching API found: ${req.url}` });
 });
 
 module.exports.handler = serverlessHttp(app);
