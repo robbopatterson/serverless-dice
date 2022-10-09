@@ -1,5 +1,6 @@
+'use strict';
 const { expect } = require('chai');           // https://semaphoreci.com/community/tutorials/best-practices-for-spies-stubs-and-mocks-in-sinon-js
-const { app } = require('../handler');
+const { app } = require('../app');
 const supertest = require('supertest');
 
 const request = supertest(app);
