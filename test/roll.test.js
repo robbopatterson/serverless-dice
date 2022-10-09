@@ -22,3 +22,10 @@ describe('Roll', () => {
         expect(firstRollMessage).to.not.equal(nextRes.body.message);
     })    
 });
+
+describe('Unknown endpoint get', () => {
+    it('should return an error', async () => {
+        const res = await request.get('/unknown');
+        expect(res.status).to.equal(404);
+    })
+});
